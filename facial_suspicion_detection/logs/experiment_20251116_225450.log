@@ -1,0 +1,38 @@
+[2025-11-16 22:54:50] [INFO] === INICIANDO PIPELINE COMPLETO ===
+[2025-11-16 22:54:50] [INFO] Configurando entorno del proyecto...
+[2025-11-16 22:54:50] [INFO] Entorno configurado correctamente
+[2025-11-16 22:54:50] [INFO] Cargando y preprocesando datos...
+[2025-11-16 22:54:52] [INFO] Reporte de calidad de datos: {'total_images': 28272, 'class_distribution': {'suspicious': 8092, 'non_suspicious': 20180}, 'image_formats': {'.jpg': 28272}, 'potential_issues': ['Desbalance significativo entre clases']}
+[2025-11-16 23:06:15] [INFO] Datos de entrenamiento: (3930, 128, 128, 3)
+[2025-11-16 23:06:15] [INFO] Datos de validación: (1310, 128, 128, 3)
+[2025-11-16 23:06:15] [INFO] Datos de prueba: (1310, 128, 128, 3)
+[2025-11-16 23:06:15] [INFO] Distribución entrenamiento: [2979  951]
+[2025-11-16 23:06:15] [INFO] Distribución prueba: [993 317]
+[2025-11-16 23:06:27] [INFO] Extrayendo características...
+[2025-11-16 23:06:27] [INFO] Extrayendo características híbridas...
+[2025-11-16 23:11:19] [INFO] Características de entrenamiento: (3930, 8210)
+[2025-11-16 23:11:19] [INFO] Iniciando entrenamiento de modelos...
+[2025-11-16 23:11:19] [INFO] Entrenando modelo CNN...
+[2025-11-16 23:11:24] [ERROR] Error en el pipeline: in user code:
+
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\training.py", line 1338, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\training.py", line 1322, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\training.py", line 1303, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\training.py", line 1085, in train_step
+        return self.compute_metrics(x, y, y_pred, sample_weight)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\training.py", line 1179, in compute_metrics
+        self.compiled_metrics.update_state(y, y_pred, sample_weight)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\compile_utils.py", line 605, in update_state
+        metric_obj.update_state(y_t, y_p, sample_weight=mask)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\metrics_utils.py", line 77, in decorated
+        update_op = update_state_fn(*args, **kwargs)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\metrics\base_metric.py", line 140, in update_state_fn
+        return ag_update_state(*args, **kwargs)
+    File "C:\Users\braya\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\metrics\base_metric.py", line 723, in update_state  **
+        matches = ag_fn(y_true, y_pred, **self._fn_kwargs)
+
+    TypeError: 'str' object is not callable
+

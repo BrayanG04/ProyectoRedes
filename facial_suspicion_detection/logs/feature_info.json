@@ -1,0 +1,9 @@
+{
+    "lbp_params": {
+        "radius": 2,
+        "n_points": 16,
+        "method": "uniform"
+    },
+    "feature_type": "hybrid",
+    "timestamp": "2025-11-17T18:31:30.082777"
+}

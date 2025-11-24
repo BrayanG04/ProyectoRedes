@@ -1,0 +1,20 @@
+{
+    "data_dir": "data/raw",
+    "model_dir": "data/models",
+    "results_dir": "results",
+    "log_dir": "logs",
+    "img_size": [
+        128,
+        128
+    ],
+    "test_size": 0.2,
+    "validation_size": 0.2,
+    "epochs": 50,
+    "batch_size": 32,
+    "feature_type": "hybrid",
+    "use_data_augmentation": true,
+    "train_cnn": true,
+    "train_classical_models": true,
+    "evaluate_bias": true,
+    "random_seed": 42
+}
