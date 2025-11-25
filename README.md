@@ -38,7 +38,6 @@ FACIAL_SUSPICION_DETECTION/
 ├── main.py
 └── utils.py
 
-text
 
 ## ⚙️ Instalación
 
@@ -57,18 +56,13 @@ cd facial-suspicion-detection
 pip install -r src/requirements.txt
 Dependencias Principales
 tensorflow - Redes neuronales y deep learning
-
 opencv-python - Procesamiento de imágenes y visión por computadora
-
 scikit-learn - Machine learning tradicional
-
 albumentations - Aumento de datos
-
 matplotlib, seaborn - Visualizaciones
-
 tkinter - Interfaz gráfica
 
-🎯 Uso Rápido
+## 🎯 Uso Rápido
 1. Entrenamiento de Modelos
 bash
 # Ejecutar pipeline completo de entrenamiento
@@ -89,7 +83,7 @@ predictor.load_models()
 result = predictor.predict_single_image("ruta/a/imagen.jpg", model_type="cnn")
 print(f"Clasificación: {result['class']}")
 print(f"Confianza: {result['confidence']:.2%}")
-📁 Estructura de Datos
+## 📁 Estructura de Datos
 Dataset de Entrenamiento
 Organiza tus imágenes en la siguiente estructura:
 
